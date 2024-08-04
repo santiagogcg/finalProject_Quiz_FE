@@ -22,9 +22,9 @@ function GetPropsUser() {
 
                 if (isAuthenticated) {
                     const response = await axios.get(`/props/${username}`)
-                    console.log(response.data)
+                    // console.log(response.data)
                     console.log("Get request para propiedades usuario realizada con éxito")
-                    // setUsername(response.data.username)
+                    setUsername(response.data.username)
                     setQuizCompleted(response.data.quizCompleted)
                     setScore(response.data.score)
                     setStatusAnswers(response.data.statusAnswers)
