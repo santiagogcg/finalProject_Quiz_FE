@@ -210,7 +210,7 @@ function Home() {
                     <nav><button className="logout-button" onClick={handleLogOut}>Cerrar Sesión</button></nav>
                     <h1>¡Gracias por participar {username}! </h1>
                     {/* <button >¿Consultas? </button> */}
-                    <button className="infoboda-button" onClick={handleInfoBoda}>¡INFO BODA!</button>
+                    <button className="infoboda-button" onClick={handleInfoBoda}>¡INFO EVENTO!</button>
                     <Ranking />
                     <h2>Tu puntuación es: {score} de {questions.length}</h2>
                 </div>

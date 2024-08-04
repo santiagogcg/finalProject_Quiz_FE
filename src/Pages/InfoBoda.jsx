@@ -21,7 +21,7 @@ function InfoBoda() {
 
         <div>
 
-            <h1>INFO BODA</h1>
+            <h1>INFO EVENTO</h1>
 
 
         </div>
