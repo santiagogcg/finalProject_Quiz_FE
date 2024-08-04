@@ -31,3 +31,11 @@ dist-ssr
 # Ignorar public file
 /public
 public
+
+# Ignorar .env
+./src/.env
+
+# Ignorar .env
+
+.env
+

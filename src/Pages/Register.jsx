@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Context from "../Context";
-import axios from 'axios';
+import axios from '../api/axios';
 import { Navigate, useNavigate } from "react-router-dom";
 
 
@@ -36,7 +36,7 @@ function Register() {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/api/register', userData);
+      const response = await axios.post('/register', userData);
       console.log('User created:', response.data);
     } catch (err) {
       console.error('Error creating user:', err);

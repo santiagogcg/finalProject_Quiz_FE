@@ -35,7 +35,7 @@ function Authentification() {
                 else if (cookies.token) {
 
 
-                    const response_verify = await axios.get('http://localhost:3000/api/verifyToken', {
+                    const response_verify = await axios.get('/verifyToken', {
 
                         withCredentials: true
                     })

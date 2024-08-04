@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import Context from "../Context";
-import axios from 'axios';
+import axios from '../api/axios';
 import { Navigate, useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie';
 
@@ -50,7 +50,7 @@ function Login() {
         };
 
         try {
-            const response_token = await axios.post('http://localhost:3000/api/login', userData, {
+            const response_token = await axios.post('/login', userData, {
 
                 withCredentials: true
             });
@@ -65,7 +65,7 @@ function Login() {
 
 
         } catch (err) {
-            console.error('Error creating user:', err);
+            console.error('Error login user:', err);
             setError("Usuario o contraseña incorrecta")
         }
     };
