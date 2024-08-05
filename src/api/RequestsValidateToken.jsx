@@ -19,20 +19,23 @@ function Authentification() {
 
         const authentification = async () => {
 
-            const cookies = Cookies.get();
-            console.log("chequeando cookies")
+            // const cookies = Cookies.get();
+
+            const token = sessionStorage.getItem('token');
+            sessionStorage.setItem('token', token);
+            console.log("chequeando token en session storage")
 
 
             try {
 
-                if (!cookies.token) {
-                    console.log("No localizado token en cookies")
+                if (!token) {
+                    console.log("No localizado token en session storage")
 
 
                     setIsAuthenticated(false)
 
                 }
-                else if (cookies.token) {
+                else if (token) {
 
 
                     const response_verify = await axios.get('/verifyToken', {
