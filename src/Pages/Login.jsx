@@ -56,7 +56,7 @@ function Login() {
             });
 
             console.log(response_token.data)
-            console.log(`'usuario':${username},'Auntenticado':${isAuthenticated}`)
+            console.log(`usuario:${username},Auntenticado:${isAuthenticated}`)
 
 
             response_token.data.username === "admin" ? navigate('/HomeAdmin') : navigate('/Home')
