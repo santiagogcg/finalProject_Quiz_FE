@@ -55,11 +55,16 @@ function Login() {
                 withCredentials: true
             });
 
-            console.log(response_token.data)
-            console.log(`usuario:${username},Auntenticado:${isAuthenticated}`)
+            if (response_token) {
+                console.log(response_token.data)
+                console.log(`usuario:${username},Auntenticado:${isAuthenticated}`)
 
 
-            response_token.data.username === "admin" ? navigate('/HomeAdmin') : navigate('/Home')
+                response_token.data.username === "admin" ? navigate('/HomeAdmin') : navigate('/Home')
+            } else {
+                console.log("Tras intento logear no ha sido posible obtener token y autenticarlo")
+
+            }
 
 
 
