@@ -46,14 +46,20 @@ function App() {
 
             <Route path='/login' element={<Login />} />
 
+
             <Route element={<ProtectedRoutes />} >
+
+
 
               <Route path='/Home' element={<Home />} />
               <Route path='/infoboda' element={<InfoBoda />} />
 
 
 
+
             </Route>
+
+
 
             <Route element={<ProtectedRoutesAdmin />} >
 
@@ -64,6 +70,7 @@ function App() {
 
 
             </Route>
+
 
 
 

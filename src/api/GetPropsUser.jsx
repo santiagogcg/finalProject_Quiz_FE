@@ -11,7 +11,7 @@ function GetPropsUser() {
 
     const { username, newUsername, password, quizCompleted, score, statusAnswers, error, timeSpent, isAuthenticated, setUsername, setNewUsername, setPassword, setQuizCompleted, setScore, setStatusAnswers, setError, setTimeSpent, setAuthenticated } = useContext(Context)
 
-
+    const navigate = useNavigate()
 
     useEffect(() => {
         const getUserProps = async () => {
@@ -52,7 +52,7 @@ function GetPropsUser() {
 
         getUserProps()
 
-    }, [username])
+    }, [navigate])
 
 
 

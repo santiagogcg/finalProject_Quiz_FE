@@ -25,6 +25,7 @@ function ProtectedRoutes() {
     return (
         <div>
 
+
             {!isAuthenticated ? <Navigate to='/login' replace={true} /> : <Outlet />}
 
         </div>

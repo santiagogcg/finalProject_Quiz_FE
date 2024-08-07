@@ -139,7 +139,7 @@ function Home() {
 
 
         // postRequestLogOut()
-        Cookies.remove('token')
+        sessionStorage.removeItem('token');
         navigate('/login')
 
     }

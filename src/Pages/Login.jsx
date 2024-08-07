@@ -3,6 +3,7 @@ import Context from "../Context";
 import axios from '../api/axios';
 import { Navigate, useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie';
+import Authentification from "../api/RequestsValidateToken";
 
 
 
@@ -57,7 +58,10 @@ function Login() {
 
             if (response_token) {
                 console.log(response_token.data)
+                sessionStorage.setItem('token', response_token.data.token);
+
                 console.log(`usuario:${username},Auntenticado:${isAuthenticated}`)
+                console.log(response_token.data.username)
 
 
                 response_token.data.username === "admin" ? navigate('/HomeAdmin') : navigate('/Home')
